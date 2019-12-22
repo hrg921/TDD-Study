@@ -9,3 +9,8 @@ Study with Test-Driven Development: By Example, Kent Beck
 3. Make some changes to the code
 4. Run all tests and verify that all succeed
 5. Refactor to eliminate duplication
+
+## Learned
+
+- all the kotlin files must be located in src directory
+- 
