@@ -8,7 +8,7 @@ class FrancTests {
     @Test
     fun `five Francs times two equals ten Francs and five Francs times three equals fifteen Francs`() {
         val five = Franc(5)
-        assertTrue(Franc(10) === five.times(2))
-        assertTrue(Franc(15) === five.times(3))
+        assertTrue(Franc(10) == five.times(2))
+        assertTrue(Franc(15) == five.times(3))
     }
 }
