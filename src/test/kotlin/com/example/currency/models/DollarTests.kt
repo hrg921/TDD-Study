@@ -4,12 +4,10 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 
-const val initialAmount: Int = 5
-
 class DollarTests {
     @Test
-    fun `Two timed five dollars are ten dollars`() {
-        val five = Dollar(initialAmount)
+    fun `five Dollars times two equals ten Dollars and five Dollars times three equals fifteen Dollars`() {
+        val five = Dollar(5)
         assertTrue(Dollar(10) == five.times(2))
         assertTrue(Dollar(15) == five.times(3))
     }

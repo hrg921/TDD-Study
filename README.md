@@ -18,6 +18,7 @@ Study with Test-Driven Development: By Example, Kent Beck
 - [ ] Dollar 부작용
 - [ ] Money 반올림
 - [x] equals
+- [ ] 5CHF * 2 = 10CHF
 
 ## Learned
 
