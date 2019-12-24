@@ -1,6 +1,6 @@
 package com.example.currency.models
 
-data class Franc(var amount: Int) {
+data class Franc(private var amount: Int) {
     fun times(multiplier: Int): Franc {
         return Franc(amount * multiplier)
     }
