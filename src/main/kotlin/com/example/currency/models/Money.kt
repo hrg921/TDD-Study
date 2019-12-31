@@ -22,4 +22,6 @@ abstract class Money(open val amount: Int) {
     override fun hashCode(): Int {
         return amount
     }
+
+    abstract fun times(multiplier: Int): Money
 }
