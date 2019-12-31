@@ -1,6 +1,6 @@
 package com.example.currency.models
 
-open class Money(open val amount: Int) {
+abstract class Money(open val amount: Int) {
     final override fun equals(other: Any?): Boolean {
         print(other)
         if (other !is Money) {
