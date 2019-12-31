@@ -1,25 +1,32 @@
 package com.example.currency.models
 
+import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
 class EqualityTests {
     @Test
-    fun `five Dollars times two equals ten Dollars and five Dollars times three equals fifteen Dollars`() {
-        val five = Money.dollar(5)
-        assertTrue(Dollar(10) == five.times(2))
-        assertTrue(Dollar(15) == five.times(3))
+    fun `five Francs not equals five Dollars`() {
+        assertFalse(Money.franc(5) == Money.dollar(5))
     }
 
     @Test
-    fun `five Francs times two equals ten Francs and five Francs times three equals fifteen Francs`() {
-        val five = Money.franc(5)
-        assertTrue(Franc(10) == five.times(2))
-        assertTrue(Franc(15) == five.times(3))
+    fun `five Francs equals five Francs`() {
+        assertTrue(Money.franc(5) == Money.franc(5))
     }
 
     @Test
-    fun `five Francs equals five Dollars`() {
-        assertTrue(Money.franc(5).equals(Money.dollar(5)))
+    fun `five Francs not equals six Francs`() {
+        assertFalse(Money.franc(5) == Money.franc(6))
+    }
+
+    @Test
+    fun `five Dollars equals five Dollars`() {
+        assertTrue(Money.dollar(5) == Money.dollar(5))
+    }
+
+    @Test
+    fun `five Dollars not equals Six Dollars`() {
+        assertFalse(Money.dollar(5) == Money.dollar(6))
     }
 }

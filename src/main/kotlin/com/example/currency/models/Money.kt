@@ -1,27 +1,28 @@
 package com.example.currency.models
 
-abstract class Money(open val amount: Int, open val currency: String) {
+class Money(val amount: Int, private val currency: String) {
     companion object {
         fun dollar(amount: Int): Money {
-            return Dollar(amount, "USD")
+            return Money(amount, "USD")
         }
 
         fun franc(amount: Int): Money {
-            return Franc(amount, "CHF")
+            return Money(amount, "CHF")
         }
     }
 
-    final override fun equals(other: Any?): Boolean {
-        print(other)
+    override fun equals(other: Any?): Boolean {
         if (other !is Money) {
             return false
         }
-        return amount == other.amount
+        return amount == other.amount && currency == other.currency
     }
 
     override fun hashCode(): Int {
         return amount
     }
 
-    abstract fun times(multiplier: Int): Money
+    fun times(multiplier: Int): Money {
+        return Money(amount * multiplier, currency)
+    }
 }
