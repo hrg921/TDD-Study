@@ -22,6 +22,10 @@ class Money(val amount: Int, private val currency: String) {
         return amount
     }
 
+    fun plus(added: Money): Money {
+        return Money(amount + added.amount, currency);
+    }
+
     fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
