@@ -1,6 +1,6 @@
-package com.example.currency.models
+package com.example
 
-class Money(val amount: Int, private val currency: String) {
+class Money(val amount: Int, private val currency: String): Expression {
     companion object {
         fun dollar(amount: Int): Money {
             return Money(amount, "USD")
