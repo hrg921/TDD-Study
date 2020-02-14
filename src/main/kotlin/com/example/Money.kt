@@ -1,6 +1,6 @@
 package com.example
 
-class Money(val amount: Int, private val currency: String): Expression {
+class Money(val amount: Int, private val currency: String) {
     companion object {
         fun dollar(amount: Int): Money {
             return Money(amount, "USD")
@@ -22,11 +22,11 @@ class Money(val amount: Int, private val currency: String): Expression {
         return amount
     }
 
-    fun plus(added: Money): Money {
+    operator fun plus(added: Money): Money {
         return Money(amount + added.amount, currency);
     }
 
-    fun times(multiplier: Int): Money {
+    operator fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
 }
